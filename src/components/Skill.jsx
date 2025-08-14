@@ -3,8 +3,8 @@ import React from 'react';
 const Skill = () => {
     return (
         <div className="flex text-sm text-gray-800 bg-white shadow-sm gap-4 p-5 px-10 m-4">
-            <div className="flex-none items-left gap-4 px-25 py-10 w-200">
-                <h2 className="text-2xl mb-3">Tech Stack</h2>
+            <div className="flex-none items-left gap-4 py-10 w-full md:w-200 px-5 md:px-25">
+                <h2 className="text-3xl mb-3">Tech Stack</h2>
 
                 <div className="mb-8">
                     <h3 className="text-xl mb-4 text-gray-800">Languages</h3>

@@ -3,8 +3,8 @@ import React from "react";
 const Header = () => {
     return (
         <header className="flex text-sm text-gray-800 bg-white shadow-sm gap-4 p-5 px-10 m-4">
-            <div className="flex-none items-left gap-4 px-25 py-10 w-200">
-                <div className="flex gap-4 flex-wrap">
+            <div className="flex-none items-left gap-4 py-10 w-full md:w-200 px-5 md:px-25">
+                <div className="flex gap-4 flex-wrap justify-center md:justify-start">
                     <a
                         href="https://github.com/aryanhgit"
                         target="_blank"
@@ -32,7 +32,7 @@ const Header = () => {
                         aria-label="LinkedIn"
                         className="underline-offset-4 underline"
                     >
-                        LinkedIn
+                        Twitter
                     </a>
                 </div>
                 <h1 className="text-3xl my-7">Aryan Raj</h1>

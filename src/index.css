@@ -1,6 +1,10 @@
 @import "tailwindcss";
 @tailwind utilities;
 
+@theme{
+  --color-blue: #1d4ed8;
+}
+
 body {
   background-color: white;
   display: flex;

@@ -1,36 +1,83 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 const Contact = () => {
+    const [error, setError] = useState(null);
+    const [status, setStatus] = useState('idle');
+    const [formData, setFormData] = useState({
+        name: '',
+        email: '',
+        message: '',
+    });
+
+    const handleChange = (e) => {
+        const { name, value } = e.target;
+        setFormData((prevData) => ({ ...prevData, [name]: value }));
+    };
+
+    const handleSubmit = async (e) => {
+        e.preventDefault();
+        setStatus('sending');
+        setError(null);
+
+        try {
+            await new Promise(resolve => setTimeout(resolve, 500));
+            setStatus('success');
+            setFormData({ name: '', email: '', message: '' });
+        } catch (error) {
+            setStatus('idle');
+            setError('Failed to send message. Please try again later.');
+        }
+    };
+
+    if (status === 'success') {
+        return (
+            <div className="flex text-sm text-gray-800 bg-white shadow-sm gap-4 p-5 px-10 m-4">
+                <div className="flex-none items-left gap-4 py-10 w-full md:w-200 px-5 md:px-25">
+                    <div className="bg-white rounded-lg w-full">
+
+                        <h2 className="text-2xl mb-3">Contact</h2>
+                        <p className="text-sm text-blue my-4">
+                            Thank you for reaching out! I will get back to you soon.
+                        </p>
+                        <div className="mt-8 text-gray-500">
+                            <p>Or email me directly at <a href="mailto:aryan01eio@gmail.com" className="text-blue hover:underline underline-offset-4">hi@aryanraj.me</a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        );
+    }
+
     return (
         <div className="flex text-sm text-gray-800 bg-white shadow-sm gap-4 p-5 px-10 m-4">
-            <div className="flex-none items-left gap-4 px-25 py-10 w-200">
-                <div className="bg-white rounded-lg">
+            <div className="flex-none items-left gap-4 py-10 w-full md:w-200 px-5 md:px-25">
+                <div className="bg-white rounded-lg w-full">
                     <h2 className="text-2xl mb-3">Contact</h2>
 
-                    <form action="#" method="POST">
+                    <form onSubmit={handleSubmit}>
                         <div className="mb-3">
-                            <label htmlFor="name" className="sr-only">Your Name</label>
-                            <input type="text" id="name" name="name" placeholder="Your Name" className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 transition-colors duration-200" />
-                        </div>  
-
-                        <div className="mb-3">
-                            <label htmlFor="email" className="sr-only">Your Email</label>
-                            <input type="email" id="email" name="email" placeholder="Your Email" className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 transition-colors duration-200" />
+                            <input type="text" name="name" value={formData.name} onChange={handleChange} placeholder="Your Name" required className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue transition-colors duration-200" />
                         </div>
 
                         <div className="mb-3">
-                            <label htmlFor="message" className="sr-only">Your Message</label>
-                            <textarea id="message" name="message" rows="6" placeholder="Your Message" className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 transition-colors duration-200 resize-none"></textarea>
+                            <input type="email" name="email" value={formData.email} onChange={handleChange} placeholder="Your Email" required className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue transition-colors duration-200" />
                         </div>
 
-                        <button type="submit" className="bg-blue-600 text-white font-semibold px-6 py-3 rounded-lg hover:bg-blue-700 transition-colors duration-200">
-                            Send Message
+                        <div className="mb-3">
+                            <textarea name="message" value={formData.message} onChange={handleChange} placeholder="Your Message" required className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue transition-colors duration-200 resize-none" />
+                        </div>
+
+                        <button type="submit" className="bg-blue text-white px-3 py-2 rounded hover:bg-blue transition-colors duration-200" disabled={status === 'sending'}>
+                            {status === 'sending' ? 'Sending...' : 'Send Message'}
                         </button>
+                        {error && (
+                            <div className="mt-2 text-red-500 text-sm">{error}</div>
+                        )}
                     </form>
                 </div>
 
                 <div className="mt-8 text-gray-500">
-                    <p>Or email me directly at <a href="mailto:aryan01eio@gmail.com" className="text-blue-600 hover:underline">hi@aryanraj.me</a></p>
+                    <p>Or email me directly at <a href="mailto:aryan01eio@gmail.com" className="text-blue hover:underline underline-offset-4">hi@aryanraj.me</a></p>
                 </div>
             </div>
         </div>
