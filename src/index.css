@@ -1,0 +1,43 @@
+@import "tailwindcss";
+@tailwind utilities;
+
+body {
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  font-family: JetBrains Mono, monospace;
+  font-size: 16px;
+}
+
+#root{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100vw; 
+}
+a {
+  color: #1d4ed8;
+}
+
+a:hover {
+  color: #1d4ed8; 
+}
+
+.work-item {
+  transition: opacity 0.3s ease;
+}
+
+.work-link{
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
+.work-list:hover .work-item {
+  opacity: 0.5;
+}
+
+.work-list .work-item:hover {
+  opacity: 1;
+}
