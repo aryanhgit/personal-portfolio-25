@@ -43,6 +43,10 @@ const Skill = () => {
                             <img src="https://api.iconify.design/skill-icons:tailwindcss-light.svg" className="h-5 w-5" />
                             <span>Tailwind</span>
                         </div>
+                        <div className="flex items-center space-x-2 bg-gray-100 text-gray-800 rounded-lg px-4 py-2 text-sm">
+                            <img src="https://api.iconify.design/skill-icons:bootstrap.svg" className="h-5 w-5" />
+                            <span>Bootstrap</span>
+                        </div>
                         {/* Add more here */}
                         
                     </div>
@@ -100,6 +104,10 @@ const Skill = () => {
                         <div className="flex items-center space-x-2 bg-gray-100 text-gray-800 rounded-lg px-4 py-2 text-sm">
                             <img src="https://api.iconify.design/skill-icons:docker.svg" className="h-5 w-5" />
                             <span>Docker</span>
+                        </div>
+                        <div className="flex items-center space-x-2 bg-gray-100 text-gray-800 rounded-lg px-4 py-2 text-sm">
+                            <img src="https://api.iconify.design/skill-icons:bash-light.svg" className="h-5 w-5" />
+                            <span>Bash</span>
                         </div>
                         <div className="flex items-center space-x-2 bg-gray-100 text-gray-800 rounded-lg px-4 py-2 text-sm">
                             <img src="https://api.iconify.design/skill-icons:ubuntu-light.svg" className="h-5 w-5" />
