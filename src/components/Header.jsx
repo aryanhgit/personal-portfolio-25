@@ -37,11 +37,11 @@ const Header = () => {
                 </div>
                 <h1 className="text-3xl my-7">Aryan Raj</h1>
                 <p>
-                    I'm a full stack software engineer from India. I'm passionate about building and shipping cool and useful products. I use React, Typescript, Next.js and Tanstack Start to build opensource projects.
+                    I'm a full stack software engineer and Computer Science student, currently pursuing my B.Tech at Dr B R Ambedkar National Institute of Technology Jalandhar from India. I possess strong foundations in C++, Data Structures, and Algorithms, which underpin my development work.
                 </p>
                 <br />
                 <p>
-                    I'm inspired to learn new things and tackle new challenges. I'm currently working on a Opensource Google Calendar alternative called One and i have contributed to various opensource projects including athas, opencut, mail0 and more. I'm currently studying at Dr.APJ Abdul Kalam Technical University pursuing my B.Tech in Computer Science and Engineering.
+                    I am driven by the goal of building and shipping cool, useful products, specializing in modern full-stack development using React alongside backend frameworks like Django and Flask with MySQL. I am actively seeking a Internships to apply these skills to real-world projects, embrace new technologies, and continuously tackle new technical challenges in a dynamic environment.
                 </p>
             </div>
 

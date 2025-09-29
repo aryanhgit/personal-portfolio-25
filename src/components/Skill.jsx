@@ -62,10 +62,6 @@ const Skill = () => {
                             <img src="https://api.iconify.design/skill-icons:django.svg" className="h-5 w-5" />
                             <span>Django</span>
                         </div>
-                        <div className="flex items-center space-x-2 bg-gray-100 text-gray-800 rounded-lg px-4 py-2 text-sm">
-                            <img src="https://api.iconify.design/skill-icons:fastapi.svg" className="h-5 w-5" />
-                            <span>FastAPI</span>
-                        </div>
                         {/* Add more here */}
                         
                     </div>
@@ -102,8 +98,8 @@ const Skill = () => {
                             <span>VSCode</span>
                         </div>
                         <div className="flex items-center space-x-2 bg-gray-100 text-gray-800 rounded-lg px-4 py-2 text-sm">
-                            <img src="https://api.iconify.design/skill-icons:docker.svg" className="h-5 w-5" />
-                            <span>Docker</span>
+                            <img src="https://api.iconify.design/skill-icons:postman.svg" className="h-5 w-5" />
+                            <span>Postman</span>
                         </div>
                         <div className="flex items-center space-x-2 bg-gray-100 text-gray-800 rounded-lg px-4 py-2 text-sm">
                             <img src="https://api.iconify.design/skill-icons:bash-light.svg" className="h-5 w-5" />
